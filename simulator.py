@@ -32,7 +32,6 @@ class Request:
         time = random.random()*(self.alpha2 - self.alpha1) + self.alpha1
         return time/self.server_frequency
 
-
 class Server:
     def __init__(self, frequency, power):
         self.request_under_exec = None
