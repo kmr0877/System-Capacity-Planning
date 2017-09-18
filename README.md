@@ -80,6 +80,17 @@ Our goal is to determine the number of servers s we should operate in order to m
 We can do this project by simulating one of the s servers.This canbe done by using the arrival times of the Requests 1, (s+1), (2s+1), (3s+1) etc because each server gets one out of s requests.  In general, you can choose a random integer k(where 1≤k≤s)
 and use Requests k, (s+k), (2s+k), (3s+k) etc.
 
+The minimum response time will not occur at s= 1 nor s= 2.  You do not have to simulate these two values of s.  You will need to simulate s from 3 to n inclusively.
+
+## _simulating a PS Server_
+
+When there are n jobs in the server, then each job receives 1 n of the service. The events in a PS server are the arrival of a job to the server and the departure of a completed job from the server. You should convince yourselves that between two consecutive events,the number jobs in a PS server remains the same. The discrete event simulation advances from an event to the next one.The key data structure that you need to maintain is the list of jobs in the server. Each job is characterised by two attributes: the time the job arrives at the server and the remaining amount of service the jobs will still need. Each time when a job arrives or departs, this data structure should be updated. We will use an example to explain this. For this example, we consider a PS server with the following job arrival times and service times.
+Arrival time    Service time
+  1                  2.1
+  2                  3.3
+  3                  1.1
+  5                  0.5
+ 15                  1.7
 
 
 ## _Contribution_
