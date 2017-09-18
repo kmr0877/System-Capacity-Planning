@@ -85,9 +85,8 @@ The minimum response time will not occur at s= 1 nor s= 2.  You do not have to s
 ## _simulating a PS Server_
 
 When there are n jobs in the server, then each job receives 1 n of the service. The events in a PS server are the arrival of a job to the server and the departure of a completed job from the server. You should convince yourselves that between two consecutive events,the number jobs in a PS server remains the same. The discrete event simulation advances from an event to the next one.The key data structure that you need to maintain is the list of jobs in the server. Each job is characterised by two attributes: the time the job arrives at the server and the remaining amount of service the jobs will still need. Each time when a job arrives or departs, this data structure should be updated. We will use an example to explain this. For this example, we consider a PS server with the following job arrival times and service times.
+![project_1](https://user-images.githubusercontent.com/26761582/30526990-ee3d41c4-9c66-11e7-9e22-edecb77352c6.png)
 
-
- 
 We will illustrate how the simulation of PS server works using “on-paper simulation”.  Three of the quantities that you need to keep track of are:
 
 Next arrival time is the time of the next arrival
@@ -95,6 +94,15 @@ Next arrival time is the time of the next arrival
 Next departure time assuming no more arrivals is defined as the time of the next departure assuming that no more arrivals will come in the future. For simplicity, we will simply use the phrase next departure time. For example, if there are three jobs in the server at a certain time and these jobs still need 5, 6 and 10 units of service, then the next departure time will be 15 time units later.
 
 The list of jobs in the server. Each job is characterised by a 2-tuple. The first element of the 2-tuple is the arrival time of the job at the server and the second element is the amount of service it still needs.
+
+The on-paper simulation" is shown in below table. The notes in the last column explain whatupdates you need to do for each event. Please note that there are more quantities that you need to keep track of than those three that are mentioned above.
+A graphical representation of the PS server status over time is given in Figure 3. There are three plots in the figure, showing the arrival times, remaining amount of service for each job and the departure times. The figure is best viewed in colour because the quantities related to each job is shown in a specific colour. Note that in between two consecutive events, the remaining amount of service for each job is not a constant. What is constant in between two consecutive events is the number of jobs in the server. The number of jobs in the server determines the service rate of each job which is the slope of the remaining service curve. You will see that the slope stays constant in between two events and changes each time an event occurs.
+
+![project_2](https://user-images.githubusercontent.com/26761582/30526991-eef0c686-9c66-11e7-945a-4006119d749e.png) 
+
+![project_3](https://user-images.githubusercontent.com/26761582/30526992-ef8b64de-9c66-11e7-9889-57ca5b286d02.png)
+![project_5](https://user-images.githubusercontent.com/26761582/30526994-f03beb92-9c66-11e7-8322-7ae9d42bd096.png)
+![project_6](https://user-images.githubusercontent.com/26761582/30526995-f1193a74-9c66-11e7-960d-becaa4195fac.png)
 
 
 ## _Contribution_
