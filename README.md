@@ -85,11 +85,17 @@ The minimum response time will not occur at s= 1 nor s= 2.  You do not have to s
 ## _simulating a PS Server_
 
 When there are n jobs in the server, then each job receives 1 n of the service. The events in a PS server are the arrival of a job to the server and the departure of a completed job from the server. You should convince yourselves that between two consecutive events,the number jobs in a PS server remains the same. The discrete event simulation advances from an event to the next one.The key data structure that you need to maintain is the list of jobs in the server. Each job is characterised by two attributes: the time the job arrives at the server and the remaining amount of service the jobs will still need. Each time when a job arrives or departs, this data structure should be updated. We will use an example to explain this. For this example, we consider a PS server with the following job arrival times and service times.
+
 Arrival time    Service time
+
   1                  2.1
+  
   2                  3.3
+  
   3                  1.1
+  
   5                  0.5
+  
  15                  1.7
 
 
