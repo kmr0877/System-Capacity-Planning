@@ -68,6 +68,18 @@ case, though it is doable.
 7. If the server is operating at 1 GHz, then the probability density function g(t) of the service
 time t of the requests is:
 
+![image16](https://user-images.githubusercontent.com/26761582/30526754-68030e2a-9c63-11e7-9527-8218fa482763.png)
+
+Note that t is the service time when the request is processed by a server operating at 1 GHz. You can assume that if the same job is to be processed by a server operating at fGHz, then the service time required is tf.  For example, if a job requires a service time of 8 time units when processed by a server operating at 1 GHz, then the same job will take 81.86 time units to complete when it is processed by a server operating at 1.86 GHz.
+
+## _Goals_
+Our goal is to determine the number of servers s we should operate in order to minimise the ean response time of the requests. In order to achieve this goal, some of the tasks that we need to perform are:
+1. Computer programs or routines that generate the required probability distributions.
+2. A computer program that can simulate a PS server. The simulation program will take the number of operating servers s as an input variable. By using this program, we can test the effect of different values of s in the mean response time of the server farm.This will allow us to find a suitable value of s.
+
+We can do this project by simulating one of the s servers.This canbe done by using the arrival times of the Requests 1, (s+1), (2s+1), (3s+1) etc because each server gets one out of s requests.  In general, you can choose a random integer k(where 1≤k≤s)
+and use Requests k, (s+k), (2s+k), (3s+k) etc.
+
 
 
 ## _Contribution_
