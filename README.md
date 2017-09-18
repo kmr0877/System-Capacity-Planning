@@ -47,6 +47,28 @@ In this simulation, we will assume that
 GHz) is a function of p and is given by
 f = 1:25 + 0.31(p/200-1)
 
+For example, if 8 servers are switched on, then each server operates at a power level of 250
+Watts and its clock frequency f is 1.25 + 0:31( 250/200 - 1) = 1:3275 GHz.(assuming xxxx = 2000Watts).
+
+Note: For simplicity, we assume in this project that the servers can operate at any power
+level but in reality, a server can only operate at a discrete number of power levels.
+
+5.  We use{a1,a2,...,ak,...,...} to denote the inter-arrival times of the requests arriving at the high-speed router.  These inter-arrival times have the following properties:
+(a)  Each ak is the product of two random numbers a1k and a2k, i.e ak =a1k a2k ∀k= 1,2,...
+(b)  The sequence a1k is exponentially distributed with a mean arrival rate 7.2 requests/s.
+(c)  The sequence a2k is uniformly distributed in the interval [0.75,1.17].
+
+Note:  The  easiest  way  to  generate  the  inter-arrival  times  is  to  multiply  an  exponentially
+distributed random number with the given rate and a uniformly distributed random number
+in the given range.  It would be more difficult to use the inverse transform method in this
+case, though it is doable.
+
+6.  The high-speed router distributes the requests using round robin job assignment.  For example, assuming s servers that are switched on and the servers that are on are Server 1, Server 2, ...., Server s.  The round robin job assignment means tha Request 1 is assigned to Server1,  Request 2 to Server 2,  ...,  Requests to Servers,  Request (s+ 1) to Server 1,  Request(s+2) to Server 2, ..., Request 2s to Server s, Request (2s+ 1) to Server 1, and so on.  You can assume the time to distribute a request to a server is negligible.
+
+7. If the server is operating at 1 GHz, then the probability density function g(t) of the service
+time t of the requests is:
+
+
 
 ## _Contribution_
 Contributions are always welcome in the form of pull requests with explanatory comments.
